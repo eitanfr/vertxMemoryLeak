@@ -14,7 +14,7 @@
   eb.onopen = function () {
     console.log("connetcted");
     eb.registerHandler('feed', function (err, msg) {
-      //console.log(Json.stringify(msg).length);
+        document.getElementById("log").textContent = JSON.stringify(msg);
     });
   };
   eb.onclose = function(){
